@@ -33,3 +33,20 @@ function createEmployeeCard(name, position) {
 createEmployeeCard("John Doe", "Software Engineer"); // Test adding a new employee card
 createEmployeeCard("Jane Smith", "Data Analyst");
 createEmployeeCard("Sam Johnson", "Project Manager");
+
+// Task 3: Converting NodeLists to Arrays for Bulk Updates
+
+function bulkUpdateEmployeeCards() {
+    const employeeCardNodeList = document.querySelectorAll(".employeeCard"); // Select all employee cards using querySelectorAll
+    const employeeCardArray = Array.from(employeeCardNodeList); // Convert NodeList to an array using Array.from
+
+    // Use forEach to update styles for each card
+    employeeCardArray.forEach(card => {
+        card.style.backgroundColor = "lightgray"; // Change the background color
+        card.style.border = "2px solid black"; // Add a border to each card
+    });
+}
+
+// Apply bulk update 
+bulkUpdateEmployeeCards();
+
